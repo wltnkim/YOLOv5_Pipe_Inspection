@@ -1,0 +1,13 @@
+python train.py --img 640 --batch 16 --epochs 100 --data ./data/coco128.yaml --cfg models/yolov5s.yaml --weights ./weights/yolov5s.pt
+
+python train.py --img 640 --batch 16 --epochs 100 --data ./data/classifier_robot.yaml --cfg models/yolov5s.yaml --weights ./weights/yolov5s.pt
+
+python detect.py --source ./data/images/certificate --weights ./runs/train/exp10/weights/best.pt --conf 0.4
+
+
+/mnt/c/Users/JSK/Downloads/yolov5-master
+/mnt/d/SynologyDrive_GIVET/JisuKim/work/전장시스템연구실/0001.과제/005.산업단지 대개조 지역기업 R&D_코인즈/yolov5-master$
+
+https://github.com/ultralytics/yolov5/issues/6907
+
+/mnt/c/Users/koo70/Synology_GIVET/JisuKim/work/전장시스템연구실/0001.과제/014.스마트 제조혁신_에이시스 테크놀로지/수행/yolov5
