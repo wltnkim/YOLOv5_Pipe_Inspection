@@ -2,7 +2,13 @@ python train.py --img 640 --batch 16 --epochs 100 --data ./data/coco128.yaml --c
 
 python train.py --img 640 --batch 16 --epochs 100 --data ./data/classifier_robot.yaml --cfg models/yolov5s.yaml --weights ./weights/yolov5s.pt
 
-python detect.py --source ./data/images/certificate --weights ./runs/train/exp10/weights/best.pt --conf 0.4
+python train.py --img 640 --batch 16 --epochs 100 --data ./data/classifier_pipe.yaml --cfg models/yolov5s.yaml --weights ./weights/yolov5s.pt
+
+python train.py --img 640 --batch 16 --epochs 100 --data ./data/classifier_pipe.yaml --cfg models/yolov5x.yaml --weights ./weights/yolov5x.pt
+
+python detect.py --source ./data/images/test/images --weights ./runs/train/exp13/weights/best.pt --conf 0.4 --save-txt
+
+python detect.py --source ./get_imgs --weights ./runs/train/exp13/weights/best.pt --conf 0.4 --save-txt --project post_imgs
 
 
 /mnt/c/Users/JSK/Downloads/yolov5-master
